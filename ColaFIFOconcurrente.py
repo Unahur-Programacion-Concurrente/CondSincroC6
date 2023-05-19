@@ -32,7 +32,7 @@ class ColaFIFOconcurrente:
     def insertar(self, dato):
         self.condition.acquire()
         if self.size != 0:
-            if len(self.elementos) == self.size:
+            while len(self.elementos) == self.size:
                 self.condition.wait()
         self.elementos.append(dato)
         self.condition.notify()
