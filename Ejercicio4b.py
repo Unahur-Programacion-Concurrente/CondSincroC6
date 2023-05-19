@@ -3,9 +3,10 @@ import time
 import random
 import logging
 
-from ColaFIFOconcurrente import ColaFIFOconcurrente
+from ColaFIFOconcurrente2 import ColaFIFOconcurrente
 
 logging.basicConfig(format='%(asctime)s.%(msecs)03d [%(threadName)s] - %(message)s', datefmt='%H:%M:%S', level=logging.INFO)
+
 
 
 class Productor(threading.Thread):
